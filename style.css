@@ -125,7 +125,7 @@ time {
   display: grid;
   grid-template-columns: 1fr 4fr;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 label {
@@ -146,10 +146,8 @@ label {
 }
 
 button {
-  position: absolute;
-  margin-top: 20px;
-  bottom: 0;
-  right: 300px;
+  display: block;
+  margin: 20px auto;
   padding: 17px 70px;
   border: none;
   background-color: #343a40;
@@ -169,10 +167,14 @@ footer {
 }
 
 @media (max-width: 600px) {
+  * {
+    font-size: 12px;
+  }
   .hero-img {
     height: 100%;
     object-fit: cover;
   }
+
   .header {
     padding: 50px 30px;
     height: 20vh;
@@ -191,17 +193,25 @@ footer {
   }
 
   .news-ul {
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
   }
   .news-list {
-    width: 500px;
+    max-width: 500px;
     padding: 10px;
     border-bottom: 1px solid #ced4da;
     text-align: start;
     list-style: none;
   }
+  .contact-form {
+    display: flex;
 
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
   button {
     right: 180px;
   }
